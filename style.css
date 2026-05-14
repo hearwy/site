@@ -108,6 +108,14 @@ body {
     color: #999;
 }
 
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
 /* Обо мне */
 .about-hero {
     flex: 1;
@@ -626,6 +634,9 @@ html {
         font-size: 18px;
         text-decoration: none;
         color: var(--black);
+    }
+    .footer-metrika {
+        margin-top: 5px;
     }
 }
 

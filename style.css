@@ -69,7 +69,15 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
+}
+
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .footer-heading {
@@ -84,6 +92,8 @@ body {
     list-style: none;
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: center;
     gap: 30px;
 }
 
@@ -102,21 +112,26 @@ body {
 }
 
 .footer-bottom {
-    margin-top: 30px;
+    margin-top: 25px;
     text-align: center;
     font-size: 13px;
     color: #999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
 .footer-metrika-center {
-    margin-bottom: 15px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 15px;
 }
 
 .custom-counter {
-    margin-bottom: 8px;
     font-weight: 500;
+    margin: 0;
 }
 
 /* Обо мне */

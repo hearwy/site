@@ -1,6 +1,7 @@
 const images = document.querySelectorAll('.gallery-img');
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCaption = document.getElementById('lightbox-caption');
 const closeBtn = document.querySelector('.close-btn');
 const prevBtn = document.getElementById('prevBtn');
 const nextBtn = document.getElementById('nextBtn');
@@ -26,8 +27,18 @@ if (lightbox) {
     });
 
     function updateLightbox() {
-        if (images[currentIndex]) {
-            lightboxImg.src = images[currentIndex].src;
+        const currentImg = images[currentIndex];
+        if (currentImg) {
+            lightboxImg.src = currentImg.src;
+            const parentCard = currentImg.closest('.gallery-item');
+            if (parentCard) {
+                const captionElement = parentCard.querySelector('.gallery-caption');
+                if (captionElement && lightboxCaption) {
+                    lightboxCaption.textContent = captionElement.textContent;
+                }
+            } else if (lightboxCaption) {
+                lightboxCaption.textContent = "";
+            }
         }
     }
 
@@ -55,7 +66,7 @@ if (lightbox) {
     }
 
     lightbox.onclick = (e) => {
-        if (e.target === lightbox || e.target.classList.contains('lb-content')) {
+        if (e.target === lightbox || e.target.classList.contains('lb-content') || e.target.classList.contains('lb-caption')) {
             closeLightbox();
         }
     };

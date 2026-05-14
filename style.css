@@ -66,10 +66,15 @@ body {
 }
 
 .footer-container-two {
-    max-width: 1000px;
+    max-width: var(--container-max);
     margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.footer-metrika-left, .footer-spacer-right {
+    width: 80px;
 }
 
 .footer-heading {
@@ -108,20 +113,9 @@ body {
     color: #999;
 }
 
-.footer-container-two {
-    max-width: var(--container-max);
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.footer-links {
-    list-style: none;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 30px;
+.custom-counter {
+    margin-bottom: 8px;
+    font-weight: 500;
 }
 
 /* Обо мне */
@@ -634,9 +628,10 @@ html {
         gap: 30px; }
     .footer-container-two {
         flex-direction: column;
-        gap: 30px;
+        align-items: center;
+        gap: 25px;
     }
-    .footer-spacer {
+    .footer-spacer-right {
         display: none;
     }
     .footer-links {
@@ -644,6 +639,9 @@ html {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+    }
+    .footer-links a {
+        font-size: 18px;
     }
 }
 
@@ -654,6 +652,9 @@ html {
     }
     .nav-links a {
         font-size: 16px;
+    }
+    .footer-minimal {
+        padding: 30px 20px;
     }
     .about-hero {
         padding: 40px 20px;

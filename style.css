@@ -66,15 +66,10 @@ body {
 }
 
 .footer-container-two {
-    max-width: var(--container-max);
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-}
-
-.footer-metrika-left, .footer-spacer-right {
-    width: 80px;
+    justify-content: center;
 }
 
 .footer-heading {
@@ -111,6 +106,12 @@ body {
     text-align: center;
     font-size: 13px;
     color: #999;
+}
+
+.footer-metrika-center {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: center;
 }
 
 .custom-counter {
